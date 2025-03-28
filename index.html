@@ -29,22 +29,27 @@
         margin-top: 20px;
     }
     .cell {
-        border: 2px solid #333;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f9f9f9;
-        font-size: 16px;
-        text-align: center;
-        padding: 10px;
-    }
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    height: 100px;
+    line-height: 1.2;
+    flex-direction: column;
+}
+
     
-    .active {
-        background-color: #4CAF50 !important; /* Green background */
-        color: black !important;               /* Keep text black */
-        font-weight: normal !important;        /* No bold text */
-        border-color: #2e7d32 !important;      /* Darker green border */
-    }
+  .active {
+    background-color: #4CAF50 !important; /* Green background */
+    color: black !important;              /* Keep text black */
+    font-weight: normal !important;       /* No bold text */
+    border-color: #2e7d32 !important;     /* Optional: dark green border */
+}
+
     .free {
         background-color: #e0e0e0;
         font-weight: bold;
@@ -103,7 +108,7 @@
         <div class="bingo-grid"><div class="bingo-grid">
             <div class="cell"> 🎁 Someone Gifts 5+ SUBS</div>
             <div class="cell">🦶💥 Foot/Knee slammm</div>
-            <div class="active">🪂 Dies to Fall DMG/Cliff</div>
+            <div class="cell active">🪂 Dies to Fall DMG/Cliff</div>
             <div class="cell">🗣️ LAGGGG!</div>
             <div class="cell">💬 Chance blames chat</div>
 
