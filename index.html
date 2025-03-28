@@ -5,55 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Chance Bingo</title>
     <style>
-        body {
-            background: #FFCA1B;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-        }
-        .wrapper {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+    body {
+        background: #FFCA1B;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap; /* Add this to allow wrapping on small screens */
+    }
+    .container {
+        text-align: center;
+    }
+    .bingo-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 100px);
+        grid-template-rows: repeat(5, 100px);
+        gap: 5px;
+        margin-top: 20px;
+    }
+    .cell {
+        border: 2px solid #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+        font-size: 16px;
+        text-align: center;
+        padding: 10px;
+    }
+    .free {
+        background-color: #e0e0e0;
+        font-weight: bold;
+    }
+    .side-img {
+        max-width: 300px;
+        height: auto;
+    }
+    .sub-rule {
+        font-size: 20px;
+        margin-top: -10px;
+        margin-bottom: 25px;
+        color: #000;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    /* ✅ Scale down the bingo card only */
+    @media (max-width: 600px) {
         .container {
-            text-align: center;
+            transform: scale(0.8);
+            transform-origin: top center;
         }
-        .bingo-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 100px);
-            grid-template-rows: repeat(5, 100px);
-            gap: 5px;
-            margin-top: 20px;
-        }
-        .cell {
-            border: 2px solid #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f9f9f9;
-            font-size: 16px;
-            text-align: center;
-            padding: 10px;
-        }
-        .free {
-            background-color: #e0e0e0;
-            font-weight: bold;
-        }
+
         .side-img {
-            max-width: 300px;
-            height: auto;
+            max-width: 150px;
         }
-        .sub-rule {
-            font-size: 20px;
-            margin-top: -10px;
-            margin-bottom: 25px;
-            color: #000;
-            font-weight: bold;
-            letter-spacing: 1px;
+    }
+
+    @media (max-width: 400px) {
+        .container {
+            transform: scale(0.65);
         }
-    </style>
+
+        .side-img {
+            display: none; /* Optional: hide side images on very small screens */
+        }
+    }
+</style>
+
 </head>
 <body>
 <div class="wrapper">
