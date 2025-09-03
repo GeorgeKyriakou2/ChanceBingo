@@ -118,6 +118,17 @@
     font-size: 14px;
 }
 
+        .spacer {
+    height: 2000px; /* Adjust this value for how far down you want it */
+}
+
+.bottom-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px; /* Make it smaller */
+    height: auto;
+}
+
 </style>
 
 </head>
@@ -188,10 +199,12 @@
     <!-- Right Image -->
     <img src="Hornet_300x301.jpg" alt="Chance 2" class="side-img" />
 </div>
-
-<img src="Chance3.jpg" alt="Chance 3"/>
+<!-- Push Chance3.jpg far below -->
+<div class="spacer"></div>
+<img src="Chance3.jpg" alt="Chance 3" class="bottom-img"/>
 </body>
 </html>
+
 
 
 
